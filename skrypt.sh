@@ -29,3 +29,16 @@ if [ "$1" == "--logs" ] || [ "$1" == "-l" ]; then
         echo "Data utworzenia: $(date)" >> log$i.txt
     done
 fi
+# sprawdzanie, czy flaga --init została użyta
+if [ "$1" == "--error" ] || [ "$1" == "-e" ]; then
+    # ustawienie domyślnej liczby plików na 100, jeśli nie podano argumentu
+    num_files=${2:-100}
+
+    for i in $(seq 1 $num_files)
+    do
+        touch error$i.txt
+        echo "Nazwa pliku: error$i.txt" > error$i.txt
+        echo "Nazwa skryptu: skrypt.sh" >> error$i.txt
+        echo "Data utworzenia: $(date)" >> error$i.txt
+    done
+fi
