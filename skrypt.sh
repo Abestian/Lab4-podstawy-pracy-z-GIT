@@ -6,6 +6,8 @@ if [ "$1" == "--help" ] || [ "$1" == "-h" ]; then
     echo "--help (-h): wyświetla dostępne flagi"
     echo "--date (-d): wyświetla dzisiejszą datę"
     echo "--logs (-l) [liczba]: tworzy określoną liczbę plików log; domyślnie tworzy 30 plików"
+    echo "--init (-i): klonuje całe repozytorium do katalogu w którym został uruchomiony oraz ustawia ścieżkę w zmiennej środowiskowej PATH"
+    echo "--error (-e) [liczba]: tworzy określoną liczbę plików error; domyślnie tworzy 100 plików"
     exit 0
 fi
 
