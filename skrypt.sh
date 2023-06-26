@@ -42,3 +42,12 @@ if [ "$1" == "--error" ] || [ "$1" == "-e" ]; then
         echo "Data utworzenia: $(date)" >> error$i.txt
     done
 fi
+
+# sprawdzanie, czy flaga --init lub -i została użyta
+if [ "$1" == "--init" ] || [ "$1" == "-i" ]; then
+    # klonowanie repozytorium do katalogu w którym został uruchomiony
+    git clone https://github.com/Abestian/Lab4-podstawy-pracy-z-GIT.git
+    # ustawienie ścieżki w zmiennej środowiskowej PATH
+    export PATH=$PATH:$(pwd)
+    echo "Ścieżka została ustawiona na: $(pwd)"
+fi
